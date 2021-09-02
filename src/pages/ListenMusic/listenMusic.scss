@@ -1,0 +1,20 @@
+.listen-music {
+  --color-text: #ffffff;
+  color: #ffffff;
+  .mtb-24 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .section-album:not(:first-child) {
+    margin-top: 20px;
+  }
+  min-height: 100vh;
+  position: relative;
+  background-color: rgb(18, 18, 18);
+  &-playingbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}

@@ -1,0 +1,51 @@
+.user-account {
+  display: flex;
+  align-items: stretch;
+  color: var(--color-text);
+  background: none;
+  border: none;
+  margin: -5px;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  .user-account__left {
+    text-align: right;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .user-account__name {
+      font-size: 15px;
+      font-weight: bold;
+    }
+    .user-account__role {
+      font-size: 13px;
+    }
+  }
+  .user-account__right {
+    text-align: right;
+    padding: 5px;
+    .user-account__avatar {
+      width: 34px;
+      height: 34px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: -1px 1px 6px rgba(0, 0, 0, 0.235413);
+    }
+  }
+}
+
+.profile-menu {
+  li,
+  a {
+    display: flex;
+    align-items: center;
+    > span {
+      margin-left: 10px;
+    }
+  }
+  a {
+    color: var(--color-text);
+  }
+}

@@ -1,0 +1,81 @@
+.aromashop {
+  --color-text: rgb(34, 34, 34);
+  --color-primary: rgb(56, 74, 235);
+  font-size: 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  .header {
+    background-color: var(--background-section);
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    box-shadow: 0 10px 27px 3px rgba(221, 221, 221, 0.3);
+    .header-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+    .header-logo {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .header-menu {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .header-action {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .header-menu__item {
+      display: inline-block;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .header-menu__link {
+      display: inline-block;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      font-size: 1.5rem;
+      color: var(--color-text);
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+    .header-action__link {
+      color: var(--color-text);
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+  .main {
+    flex-grow: 1;
+  }
+  .hero-banner {
+    position: relative;
+    padding-top: 60px;
+    z-index: 9;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+      width: 35%;
+      height: 100%;
+      background-color: var(--color-primary);
+    }
+  }
+  .footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #002347;
+  }
+}
