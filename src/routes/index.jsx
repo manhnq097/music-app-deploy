@@ -16,7 +16,9 @@ const Routes = () => {
     return (
         <Switch>
             {/* Home */}
-            <Route exact path="/" component={ListenMusic} />
+            <Route exact path="/" >
+                <Profile btnPrint={true} />
+            </Route>
             <Route path="/print-profile" component={PrintProfile} />
 
             {/* Website */}

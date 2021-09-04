@@ -2,7 +2,6 @@ import { useTranslation } from "react-i18next";
 import { withRouter } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 
-
 const useStyles = makeStyles({
     breadcrumbs: {
         display: 'flex',
@@ -31,7 +30,6 @@ const useStyles = makeStyles({
         color: 'var(--color-primary)',
     }
 })
-
 
 const Breadcrumb = props => {
     const { t } = useTranslation();

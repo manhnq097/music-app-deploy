@@ -25,6 +25,9 @@ const App = props => {
     return (
         <BrowserRouter>
             <div className="app" toggledarkmode={props.toggleDarkMode ? 'true' : 'false'}>
+                <div className="layout-sidebar" togglesidebar={props.toggleSidebar ? 'true' : 'false'}>
+                    <Sidebar />
+                </div>
                 <div className="layout-main" togglesidebar={props.toggleSidebar ? 'true' : 'false'}>
                     <Routes />
                 </div>

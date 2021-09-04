@@ -1,6 +1,6 @@
 @import "./reset.scss";
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap");
 
 @font-face {
     font-family: GoogleSans;
@@ -137,7 +137,45 @@ body {
     color: #ffffff;
 }
 
+.layout-sidebar {
+    width: 250px;
+    background: var(--color-gradient);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    background: var(--background-section);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgb(49, 49, 49);
+        border-radius: 4px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: var(--primary);
+    }
+    .action {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px 20px;
+        background: #b6b6b6;
+    }
+    &[togglesidebar="false"] {
+        width: 80px;
+    }
+}
+
 .layout-main {
+    margin-left: 250px;
     min-height: 100vh;
     position: relative;
     .layout_main__content {
@@ -165,4 +203,22 @@ body {
 }
 .layout-main__breadcrum {
     margin-bottom: 24px;
+}
+
+.layout-main {
+    .listen-music {
+        &-playingbar {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            left: 250px;
+        }
+    }
+    &[togglesidebar="false"] {
+        .listen-music {
+            &-playingbar {
+                left: 80px;
+            }
+        }
+    }
 }
